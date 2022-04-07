@@ -2,7 +2,7 @@
 
 echo "Updating system..."
 
-sudo apt update && sudo apt dist-upgrade -y
+sudo apt update && sudo apt dist-upgrade -y && sudo apt install -y qtwayland5 seahorse
 
 echo "Downloading fixes..."
 
