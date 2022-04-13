@@ -1,7 +1,9 @@
 #!/bin/bash
 
-echo "Updating system..."
+echo "Adding useful/debugging repos for convenience..."
+sudo echo 'deb http://droidian-stated.repo.droidian.org/bullseye-initial-implementation/ bullseye main' >> /etc/apt/sources.list
 
+echo "Updating system..."
 sudo apt update && sudo apt dist-upgrade -y && sudo apt install -y qtwayland5 seahorse
 
 echo "Downloading fixes..."
