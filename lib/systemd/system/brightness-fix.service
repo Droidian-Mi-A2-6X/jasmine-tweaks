@@ -1,5 +1,6 @@
 [Unit]
 Description=jasmine: Fix display brightness permissions on stock vendor
+Before=phosh.service
 
 [Service]
 User=root
