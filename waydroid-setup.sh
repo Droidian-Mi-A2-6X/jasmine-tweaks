@@ -8,8 +8,10 @@ export DISTRO="bullseye" && sudo curl -# --proto '=https' --tlsv1.2 -Sf https://
 
 echo "Installing waydroid package ..."
 
-sudo apt install waydroid -y && echo "Waydroid init ..." && sudo waydroid init
+sudo apt install waydroid -y && echo "Waydroid init ..." && sudo waydroid init -c https://waydroid.bardia.tech/OTA/system -v https://waydroid.bardia.tech/OTA/vendor -s GAPPS
 
-echo "Rebooting now."
+echo "Rebooting now..."
+
+sleep 5
 
 sudo reboot
