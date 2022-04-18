@@ -1,0 +1,11 @@
+[Unit]
+Description=jasmine: Disable LMK to avoid applications crash
+After=phosh.service
+
+[Service]
+User=root
+ExecStart=/usr/bin/disable-lmk.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
