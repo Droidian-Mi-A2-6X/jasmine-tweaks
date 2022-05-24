@@ -20,11 +20,7 @@ sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/ma
 
 echo "Downloaded brightness fix"
 
-sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/master/lib/systemd/system/disable-lmk.service -O /lib/systemd/system/disable-lmk.service && sudo chmod 0644 /lib/systemd/system/disable-lmk.service && sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/master/usr/bin/disable-lmk.sh -O /usr/bin/disable-lmk.sh && sudo chmod +x /usr/bin/disable-lmk.sh
-
-echo "Downloaded LMK fix"
-
-sudo systemctl daemon-reload && sudo systemctl enable bluebinder.service && sudo systemctl enable brightness-fix.service && sudo systemctl start brightness-fix.service && sudo systemctl enable disable-lmk.service && sudo systemctl start disable-lmk.service
+sudo systemctl daemon-reload && sudo systemctl enable bluebinder.service && sudo systemctl enable brightness-fix.service && sudo systemctl start brightness-fix.service
 
 echo "Fixes installed"
 

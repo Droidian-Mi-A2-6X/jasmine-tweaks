@@ -5,7 +5,6 @@ These tweaks are specifically for jasmine/wayne. At some point these fixes shoul
 1. Brightness (You must disable automatic brightness from settings>power in gnome settings)
 2. Bluetooth
 3. Scaling
-4. Avoid application crash
 
 The `setup.sh` script additionally installs and enables flathub and kdeapps flathub repos and sets `switch-a` and `switch-b` bootctl alias too.
 
