@@ -8,25 +8,9 @@ sudo apt update && sudo apt dist-upgrade -y && sudo apt install -y qtwayland5 se
 
 echo "Downloading fixes..."
 
-sudo mkdir /lib/systemd/system/bluebinder.service.d/
-
-echo "Created bluebinder service directory"
-
-sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/master/lib/systemd/system/bluebinder.service.d/90-jasmine.conf -O /lib/systemd/system/bluebinder.service.d/90-jasmine.conf && sudo chmod 0644 /lib/systemd/system/bluebinder.service.d/90-jasmine.conf
-
-echo "Downloaded bluebinder fix"
-
-sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/master/lib/systemd/system/brightness-fix.service -O /lib/systemd/system/brightness-fix.service && sudo chmod 0644 /lib/systemd/system/brightness-fix.service
-
-echo "Downloaded brightness fix"
-
-sudo systemctl daemon-reload && sudo systemctl enable bluebinder.service && sudo systemctl enable brightness-fix.service && sudo systemctl start brightness-fix.service
+sudo mkdir /lib/systemd/system/bluebinder.service.d/ && sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/master/lib/systemd/system/bluebinder.service.d/90-jasmine.conf -O /lib/systemd/system/bluebinder.service.d/90-jasmine.conf && sudo chmod 0644 /lib/systemd/system/bluebinder.service.d/90-jasmine.conf && sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/master/lib/systemd/system/brightness-fix.service -O /lib/systemd/system/brightness-fix.service && sudo chmod 0644 /lib/systemd/system/brightness-fix.service && sudo systemctl daemon-reload && sudo systemctl enable bluebinder.service && sudo systemctl enable brightness-fix.service && sudo systemctl start brightness-fix.service && sudo mkdir -p /etc/systemd/system/phosh.service.d/ && sudo wget https://raw.githubusercontent.com/Droidian-Mi-A2-6X/droidian-tweaks/master/etc/systemd/system/phosh.service.d/90-wait.conf -O /etc/systemd/system/phosh.service.d/90-wait.conf && sudo rm /usr/share/phosh/phoc.ini && sudo wget https://github.com/Droidian-Mi-A2-6X/droidian-tweaks/raw/master/usr/share/phosh/phoc.ini -O /usr/share/phosh/phoc.ini && sudo chmod 0644 /usr/share/phosh/phoc.ini
 
 echo "Fixes installed"
-
-sudo rm /usr/share/phosh/phoc.ini && sudo wget https://github.com/Droidian-Mi-A2-6X/droidian-tweaks/raw/master/usr/share/phosh/phoc.ini -O /usr/share/phosh/phoc.ini && sudo chmod 0644 /usr/share/phosh/phoc.ini
-
-echo "Downloaded screen resolution fix"
 
 echo "Setting up flatpak repo(s) for convenience..."
 
