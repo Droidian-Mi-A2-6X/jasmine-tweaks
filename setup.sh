@@ -2,6 +2,9 @@
 
 echo "Adding useful/debugging repos for convenience..."
 sudo echo 'deb http://droidian-stated.repo.droidian.org/bullseye-initial-implementation/ bullseye main' >> /etc/apt/sources.list
+sudo echo 'deb http://droidian-libhybris.repo.droidian.org/bookworm-wayland-egl-displays/ bookworm main' >> /etc/apt/sources.list
+sudo echo 'deb http://droidian-droidian-quirks.repo.droidian.org/bookworm-webkit-accel/ bookworm main' >> /etc/apt/sources.list
+
 
 echo "Updating system..."
 sudo apt update && sudo apt dist-upgrade -y && sudo apt install -y qtwayland5 seahorse power-profiles-daemon dialog
