@@ -7,7 +7,7 @@ sudo echo 'deb http://droidian-droidian-quirks.repo.droidian.org/bookworm-webkit
 
 
 echo "Updating system..."
-sudo apt update && sudo apt dist-upgrade -y && sudo apt install -y qtwayland5 seahorse power-profiles-daemon dialog
+sudo apt update && sudo apt dist-upgrade -y && sudo apt install -y seahorse dialog
 
 echo "Downloading fixes..."
 
